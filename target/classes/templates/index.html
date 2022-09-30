@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Veterinaria Patitas</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+	<script th:src="@{/js/jquery/jquery-3.6.0.js}"></script>
+	<script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+	<script th:src="@{../css/index.css}"></script>
+	<script type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb496ab1a0.js"></script>
+	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+	<!-- google maps-->
+	<link rel="stylesheet" th:href="@{/css/map.css}">
+	<style>
+		/* Make the image fully responsive */
+		.carousel-inner img {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+		}
+	</style>
+</head>
+
+<body class="bdfoto">
+	<div class="container-fluid">
+		<div class="div.fixed">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="nav1">
+				<h1 style="color:white;">Veterinaria Patitas</h1>
+				<!-- Links -->
+
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/historia}">Historia</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/reserva}">Reservar Hora</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/cancelar}">Cancelar Reserva</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/logout}">Cerrar Sesión</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top:80px">
+
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img th:src="@{/img/dog1.jpg}" alt="img1">
+			</div>
+			<div class="carousel-item">
+				<img th:src="@{/img/dog2.jpg}" alt="img2">
+			</div>
+			<div class="carousel-item">
+				<img th:src="@{/img/dog3.jpg}" alt="img3">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+
+	</div>
+
+	<footer class="pie-pagina">
+		<div class="grupo-1">
+			<div class="box">
+				<h2>QUIENES SOMOS</h2>
+				<p>Somos una veterinaria comprometida con nuestros clientes y pacientes para bridar el mejor servicio
+					posible.</p>
+			</div>
+			<div class="box">
+				<h2>SIGUENOS</h2>
+				<div class="red-social">
+					<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+					<a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+				</div>
+			</div>
+			<div class="box">
+				<h2>UBICANOS</h2>
+				<p>Calle 1 Pte. Labranza, Araucanía</p>
+				<div id="map">
+					<script th:src="@{/js/script_map.js}"></script>
+					<script
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+				</div>
+			</div>
+		</div>
+		<div class="grupo-2">
+			<small>&copy; 2021 - Todos los Derechos Reservados.</small>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

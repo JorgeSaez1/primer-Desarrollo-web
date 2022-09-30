@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cancelar Reserva</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+	<script th:src="@{/js/jquery/jquery-3.6.0.js}"></script>
+	<script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/cancelar.css}">
+	<script type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb496ab1a0.js"></script>
+	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+	<!-- google maps-->
+	<link rel="stylesheet" th:href="@{/css/map.css}">
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="div.fixed">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="nav1">
+				<h1 style="color:white;">Veterinaria Patitas</h1>
+				<!-- Links -->
+
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/historia}">Historia</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/reserva}">Reservar Hora</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/cancelar}">Cancelar Reserva</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/volver}">Principal</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/logout}">Cerrar Sesión</a>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<section class="form-register">
+		<form action="" method="post">
+			<h4>Busqueda de Hora Reservada</h4>
+			<input class="controls" type="text" name="Rut" placeholder="Ingrese el Rut" required>
+			<p><input class="botons" type="submit" name="" value="Buscar"></p><br><br>
+			<a class="boton" th:href="@{/volver}">regresar</a>
+		</form>
+	</section>
+
+
+	<br><br><br><br><br>
+	<footer class="pie-pagina">
+		<div class="grupo-1">
+			<div class="box">
+				<h2>QUIENES SOMOS</h2>
+				<p>Somos una veterinaria comprometida con nuestros clientes y pacientes para bridar el mejor servicio
+					posible.</p>
+			</div>
+			<div class="box">
+				<h2>SIGUENOS</h2>
+				<div class="red-social">
+					<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+					<a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+				</div>
+			</div>
+			<div class="box">
+				<h2>UBICANOS</h2>
+				<p>Calle 1 Pte. Labranza, Araucanía</p>
+				<div id="map">
+					<script th:src="@{/js/script_map.js}"></script>
+					<script
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+				</div>
+			</div>
+		</div>
+		<div class="grupo-2">
+			<small>&copy; 2021 - Todos los Derechos Reservados.</small>
+		</div>
+	</footer>
+
+</body>
+
+</html>
